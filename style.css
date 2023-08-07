@@ -1,0 +1,77 @@
+:root {
+  --color-default: #5c5b5b;
+  --color-first: #065096;
+  --color-second: #178fdf;
+  --color-black: #000000;
+  --color-body: linear-gradient(to bottom, rgba(173, 169, 169, 0), rgb(114, 114, 114));
+  --color-light: #e0e0e0;
+}
+#home {
+  background: var(--color-body);
+}
+.navbar {
+  background-color: var(--color-default);
+  color: var(--color-light);
+}
+.jumbotron {
+  padding-top: 6rem;
+  padding-bottom: 8rem;
+  background-image: url(https://images.unsplash.com/photo-1510519138101-570d1dca3d66?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8b2ZmaWNlJTIwZGFya3xlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80);
+  color: var(--color-light);
+}
+#about {
+  padding-top: 6rem;
+  background-color: var(--color-body);
+  color: var(--color-black);
+}
+#projects {
+  padding-top: 6rem;
+  background-color: var(--color-body);
+  color: var(--color-black);
+}
+.card {
+  color: var(--color-black);
+  background-color: white;
+  border-radius: 0;
+}
+.card p{
+  padding-top: 1rem;
+}
+.card .btn {
+  background-color: var(--color-second);
+  color: var(--color-body);
+}
+.card .btn:hover {
+  background-color: var(--color-first);
+}
+.card h5{
+  text-align: center;
+}
+.card {
+  width: 350px;
+  height: 400px;
+}
+.card img {
+  width: 348px;
+  height: 230px;
+}
+#contact {
+  padding-top: 6rem;
+  background-color: var(--color-body);
+  color: var(--color-black);
+}
+#contact .btn {
+  background-color: var(--color-default);
+  color: var(--color-light);
+}
+#contact textarea{
+  resize: none;
+}
+.last {
+  background-color: var(--color-default);
+  color: var(--color-light);
+}
+.last p a {
+  color: var(--color-body);
+  text-decoration: none;
+}
