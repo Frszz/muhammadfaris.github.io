@@ -125,21 +125,29 @@
         </div>
         <div class="row justify-content-center">
           <div class="col-md-6">
-            <form class="submit-to-google-sheet">
+            <div class="alert alert-dismissible fade show d-none" role="alert">
+              <strong>Terimakasih!</strong> Pesan anda sudah diterima.
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <form name="submit-to-google-sheet">
               <div class="mb-3">
-                <label for="name" class="form-label">Name</label>
-                <input type="text" class="form-control" id="name" aria-describedby="name" />
+                <label for="name" class="form-label">name</label>
+                <input type="text" class="form-control" id="name" name="name" aria-describedby="name" />
               </div>
               <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" aria-describedby="email" />
+                <label for="email" class="form-label">email</label>
+                <input type="email" class="form-control" id="email" name="email" aria-describedby="email" />
               </div>
               <div class="mb-3">
-                <label for="message" class="form-label">Message</label>
-                <textarea class="form-control" id="message" rows="3"></textarea>
+                <label for="message" class="form-label">message</label>
+                <textarea class="form-control" id="message" name="message" rows="3"></textarea>
               </div>
-              <button type="submit" class="btn">Send</button>
-              <span id="msg"></span>
+              <button type="submit" class="btn btn-kirim">Send</button>
+
+              <button class="btn btn-loading d-none" type="button" disabled>
+                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                Loading...
+              </button>
             </form>
           </div>
         </div>
@@ -163,20 +171,14 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 
     <script>
-      const scriptURL = "https://script.google.com/macros/s/AKfycbzyqp6qPMdamrGPsj1Q5XRQXNcXw2G2vjnnXJGqlNk53tD8ikxSy1dI1UUGsRSScsv5/exec";
+      const scriptURL = "https://script.google.com/macros/s/AKfycbyYnt6nZLyyuP4wE83d0cnPqWpCi6ZKU_S0gPSKeNwfUiVrslAYe9DZh-CpA98R1o0I4A/exec";
       const form = document.forms["submit-to-google-sheet"];
-      const msg = document.getElementById("msg");
+       
 
       form.addEventListener("submit", (e) => {
         e.preventDefault();
         fetch(scriptURL, { method: "POST", body: new FormData(form) })
-          .then((response) => {
-            msg.innerHTML = "Thank you for your message!";
-            setTimeout(function () {
-              msg.innerHTML = "";
-            }, 5000);
-            form.reset();
-          })
+          .then((response) => console.log("Success!", response))
           .catch((error) => console.error("Error!", error.message));
       });
     </script>

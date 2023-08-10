@@ -63,9 +63,17 @@
 #contact .btn {
   background-color: var(--color-default);
   color: var(--color-light);
+  border: none;
+}
+#contact .btn:hover{
+  background-color: #414040;
+  color: var(--color-light);
 }
 #contact textarea {
   resize: none;
+}
+.alert{
+  background-color: var(--color-light);
 }
 .last {
   background-color: var(--color-default);
