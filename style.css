@@ -34,7 +34,7 @@
   background-color: white;
   border-radius: 0;
 }
-.card p{
+.card p {
   padding-top: 1rem;
 }
 .card .btn {
@@ -44,7 +44,7 @@
 .card .btn:hover {
   background-color: var(--color-first);
 }
-.card h5{
+.card h5 {
   text-align: center;
 }
 .card {
@@ -64,7 +64,7 @@
   background-color: var(--color-default);
   color: var(--color-light);
 }
-#contact textarea{
+#contact textarea {
   resize: none;
 }
 .last {
