@@ -1,37 +1,59 @@
 :root {
-  --color-default: #5c5b5b;
-  --color-first: #065096;
-  --color-second: #178fdf;
+  --color-default: -webkit-linear-gradient(#000000, #280030);
+  --color-body: #ffffff;
+  --color-first: #c409b4;
+  --color-second: #a71086;
   --color-black: #000000;
-  --color-body: linear-gradient(to bottom, rgba(173, 169, 169, 0), rgb(114, 114, 114));
   --color-light: #e0e0e0;
 }
+
+/* All Body */
 #home {
-  background: var(--color-body);
+  background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20201009/pngtree-science-or-technology-background-with-dynamic-particles-trendy-colorful-design-template-image_406781.jpg);
+  color: var(--color-light);
+  width: 100%;
+  height: 100%;
+  background-size: 100%;
 }
+
+/* Navbar */
 .navbar {
-  background-color: var(--color-default);
+  background: var(--color-default);
+}
+.navbar .nav-item .nav-link {
   color: var(--color-light);
 }
+.navbar .nav-item .nav-link:hover {
+  color: var(--color-first);
+}
+/* Jumbotron */
 .jumbotron {
-  padding-top: 6rem;
-  padding-bottom: 8rem;
-  background-image: url(https://images.unsplash.com/photo-1510519138101-570d1dca3d66?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8b2ZmaWNlJTIwZGFya3xlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80);
-  color: var(--color-light);
+  padding-top: 10rem;
+  padding-bottom: 10rem;
 }
+.jumbotron .rounded-circle {
+  background-color: var(--color-light);
+}
+.jumbotron .display-4 {
+  background: -webkit-linear-gradient(#ff00c8, #63014f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* About */
 #about {
-  padding-top: 6rem;
-  background-color: var(--color-body);
-  color: var(--color-black);
+  padding-top: 10rem;
+  padding-bottom: 12rem;
 }
+
+/* Project */
 #projects {
-  padding-top: 6rem;
-  background-color: var(--color-body);
-  color: var(--color-black);
+  padding-top: 8rem;
+  padding-bottom: 8rem;
 }
 .card {
   color: var(--color-black);
-  background-color: white;
+  background: var(--color-light);
   border-radius: 0;
 }
 .card p {
@@ -47,39 +69,47 @@
 .card h5 {
   text-align: center;
 }
-.card {
-  width: 350px;
-  height: 400px;
+
+
+/* Gallery */
+#gallery {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
 }
-.card img {
-  width: 348px;
-  height: 230px;
+#gallery .row > * {
+  padding: 0;
 }
+.gallery-img {
+  width: 100%;
+}
+
+/* Contact */
 #contact {
-  padding-top: 6rem;
-  background-color: var(--color-body);
-  color: var(--color-black);
+  padding-top: 8rem;
+  padding-bottom: 8rem;
 }
 #contact .btn {
-  background-color: var(--color-default);
+  background-color: var(--color-second);
   color: var(--color-light);
   border: none;
 }
-#contact .btn:hover{
-  background-color: #414040;
+#contact .btn:hover {
+  background-color: var(--color-first);
   color: var(--color-light);
 }
 #contact textarea {
   resize: none;
 }
-.alert{
+.alert {
   background-color: var(--color-light);
 }
-.last {
-  background-color: var(--color-default);
+
+/* Footer */
+.footer {
+  background: -webkit-linear-gradient(#280030, #000000);
   color: var(--color-light);
 }
-.last p a {
-  color: var(--color-body);
+.footer p a {
+  color: var(--color-light);
   text-decoration: none;
 }
